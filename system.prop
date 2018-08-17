@@ -49,7 +49,7 @@ ro.bluetooth.sap=false
 # Camera
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+camera.hal1.packagelist=com.skype.raider,com.android.facelock,com.google.android.talk
 vidc.dec.downscalar_width=1920
 vidc.dec.downscalar_height=1088
 vidc.dec.disable.split.cpu=1
