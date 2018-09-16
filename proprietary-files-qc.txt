@@ -256,7 +256,7 @@ vendor/lib/libsdmextension.so|3191101a6550ee2ce4dc9bf627c6574881dec6a7
 vendor/lib/libtinyxml2_1.so|8e4518688e4be068ad43624d4e0d3c7461e54791
 
 # IMS - from tissot - OPR1.170623.026
--app/ims/ims.apk|2eababb6ac1a108d2575b98768adf4649520ba96
+-app/ims/ims.apk|3806a916da8adc1e1787ec45a074a55968a0e752
 -app/imssettings/imssettings.apk|e09821a12dc92d138e82d68b0d63e67f497b6106
 etc/permissions/qti-vzw-ims-internal.xml|3e41b645dd4ad8bad6775c103a34bfd7a507a4f7
 lib/com.qualcomm.qti.imscmservice@1.0.so|1dec77e0803ea99d85c87874c81c54688d4bd59d
