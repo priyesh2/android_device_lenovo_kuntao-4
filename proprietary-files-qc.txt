@@ -37,9 +37,9 @@ vendor/lib64/libaudioalsa.so|e0c80f38802cfd6cc74352a108040ff5f165614b
 vendor/lib64/libqtigef.so|63a415a14489f2a45315038a45f8e0f4fe7efa2c
 
 # Bluetooth
-bin/btnvtool:vendor/bin/btnvtool
-bin/hci_qcomm_init:vendor/bin/hci_qcomm_init
-bin/wcnss_filter:vendor/bin/wcnss_filter
+bin/wcnss_filter:vendor/bin/wcnss_filter|adee628bd5c48ab1ceb87fb3224fda1442760fb4
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|0a9c71d0c7299a87c9f0876334268f0ef1f4ab18
+vendor/lib64/libbtnv.so|21c928e2d68980008ce8d8d1312ded932e79768d
 
 # Charger
 bin/hvdcp_opti:vendor/bin/hvdcp_opti
