@@ -209,6 +209,11 @@ TARGET_RIL_VARIANT := caf
 #BOARD_SEPOLICY_DIRS += device/lenovo/kuntao/sepolicy
 #include device/qcom/sepolicy/sepolicy.mk
 
+# Shim
+TARGET_LD_SHIM_LIBS := \
+  /vendor/lib64/vendor.qti.gnss@1.0_vendor.so|libgnss_shim.so \
+  /system/lib64/vendor.qti.gnss@1.0.so|libgnss_shim.so
+
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true

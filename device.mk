@@ -190,7 +190,8 @@ PRODUCT_PACKAGES += \
     libgps.utils \
     liblocation_api \
     libloc_core \
-    libloc_pla
+    libloc_pla \
+    libgnss_shim
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
