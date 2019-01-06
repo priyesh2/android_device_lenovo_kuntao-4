@@ -14,4 +14,5 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_kuntao.mk
+    $(LOCAL_DIR)/xtended_kuntao.mk \
+    $(LOCAL_DIR)/full_kuntao.mk

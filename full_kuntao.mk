@@ -21,6 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from kuntao device
 $(call inherit-product, device/lenovo/kuntao/device.mk)
 
+TARGET_VENDOR := kuntao
+
 # Device vendor
 $(call inherit-product-if-exists, vendor/lenovo/kuntao/kuntao-vendor.mk)
 

@@ -38,7 +38,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     vidc.enc.dcvs.extra-buff-count=2 \
-    camera.lowpower.record.enable=1
+    camera.lowpower.record.enable=1 \
+    persist.camera.HAL3.enabled=1
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -92,6 +93,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     log.tag.synaFpHal=W \
     log.tag.SynapticsLIB=W \
     log.tag.synaTransport=W
+
+# FP Gesture
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fp.navigation=1
 
 # Charger
 PRODUCT_PROPERTY_OVERRIDES += \
