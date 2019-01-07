@@ -36,6 +36,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    camera.hal1.packagelist=com.skype.raider,com.android.facelock,com.google.android.talk \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     vidc.enc.dcvs.extra-buff-count=2 \
@@ -56,7 +57,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.gralloc.enable_fb_ubwc=1 \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=0 \
     ro.sf.lcd_density=480 \
@@ -77,11 +77,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1
+    persist.dbg.vt_avail_ovr=1 \
     persist.radio.VT_CAM_INTERFACE=2 \
     persist.radio.VT_ENABLE=1 \
     persist.radio.VT_HYBRID_ENABLE=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=2
+    persist.vendor.qti.telephony.vt_cam_interface=1
 
 # Gps
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -96,6 +96,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable_bframes=1 \
     vendor.vidc.enc.disable_pframes=1 \
     vendor.vidc.enc.narrow.searchrange=1
+
+# Miracast
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_hwc_vds=1 \
+    persist.hwc.enable_vds=1 \
+    persist.sys.wfd.nohdcp=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0 \
+    vendor.gralloc.disable_wb_ubwc=1 \
+    vendor.gralloc.enable_fb_ubwc=1
 
 # NITZ
 PRODUCT_PROPERTY_OVERRIDES += \
