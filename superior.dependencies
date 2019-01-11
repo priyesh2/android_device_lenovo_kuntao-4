@@ -4,11 +4,11 @@
     "target_path": "device/qcom/common"
   },
   {
-    "repository": "android_kernel_lenovo_msm8953",
-    "target_path": "kernel/lenovo/p2"
+    "repository": "vendor_lenovo_kuntao",
+    "target_path": "vendor/lenovo/kuntao"
   },
   {
-    "repository": "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings"
+    "repository": "kernel_lenovo_kuntao",
+    "target_path": "kernel/lenovo/msm8953"
   }
 ]
