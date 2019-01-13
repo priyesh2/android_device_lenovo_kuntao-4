@@ -97,6 +97,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable_pframes=1 \
     vendor.vidc.enc.narrow.searchrange=1
 
+# Miracast
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_hwc_vds=1 \
+    persist.hwc.enable_vds=1 \
+    persist.sys.wfd.nohdcp=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0 \
+    vendor.gralloc.disable_wb_ubwc=1 \
+    vendor.gralloc.enable_fb_ubwc=1 \
+    vendor.video.disable.ubwc=1
+
+
 # NITZ
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_plmn="" \
