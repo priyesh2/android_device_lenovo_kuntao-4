@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/superior_kuntao.mk
+    $(LOCAL_DIR)/omni_kuntao.mk

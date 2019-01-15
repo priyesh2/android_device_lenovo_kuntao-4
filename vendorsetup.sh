@@ -1,3 +1,3 @@
-add_lunch_combo superior_kuntao-eng
-add_lunch_combo superior_kuntao-user
-add_lunch_combo superior_kuntao-userdebug
+add_lunch_combo omni_kuntao-eng
+add_lunch_combo omni_kuntao-user
+add_lunch_combo omni_kuntao-userdebug

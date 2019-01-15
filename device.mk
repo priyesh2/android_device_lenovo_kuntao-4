@@ -131,8 +131,8 @@ PRODUCT_PACKAGES += \
     libaacwrapper \
     libnl
 
- PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 # Display Calibration
 PRODUCT_COPY_FILES += \
@@ -356,7 +356,8 @@ include $(LOCAL_PATH)/vendor_prop.mk
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
+    android.hardware.usb@1.0-service.basic \
+    android.hardware.usb@1.0-service.msm8996.rc
 
 # Sensor
 PRODUCT_PACKAGES += \

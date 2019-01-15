@@ -1,0 +1,13 @@
+[
+  {
+    "remote": "omnirom"
+    "repository": "android_device_qcom_common",
+    "target_path": "device/qcom/common"
+  },
+  {
+    "remote": "github",
+    "repository": "saikiran2001/android_kernel_lenovo_msm8953",
+    "target_path": "kernel/lenovo/msm8953",
+    "revision": "9.0"
+  }
+]
