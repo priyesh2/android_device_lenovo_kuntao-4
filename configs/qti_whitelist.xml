@@ -34,3 +34,4 @@
     <!-- These are telephony components that need to freely run in the background -->
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.client" />
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.service" />
+</config>
