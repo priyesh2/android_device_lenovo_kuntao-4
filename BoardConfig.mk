@@ -13,6 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Encryption
+TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
+
 # Architecture
 TARGET_BOARD_SUFFIX := _64
 TARGET_ARCH := arm64
@@ -126,14 +130,14 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Hals
-TARGET_QCOM_AUDIO_VARIANT := msm8996
-TARGET_QCOM_MEDIA_VARIANT := msm8996
+TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
+TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
 TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/display-$(TARGET_QCOM_DISPLAY_VARIANT) \
-    hardware/qcom/audio/$(TARGET_QCOM_AUDIO_VARIANT) \
-    hardware/qcom/media/$(TARGET_QCOM_MEDIA_VARIANT)
+    hardware/qcom/audio-$(TARGET_QCOM_AUDIO_VARIANT) \
+    hardware/qcom/media-$(TARGET_QCOM_MEDIA_VARIANT)
 
 # Hidl manifests
 DEVICE_MANIFEST_FILE := device/lenovo/kuntao/manifest.xml

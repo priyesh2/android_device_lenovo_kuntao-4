@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+#$(call inherit-product, device/lenovo/kuntao/hidl.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -203,8 +204,7 @@ PRODUCT_COPY_FILES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0-java
+    android.hidl.manager@1.0
 
 # Healthd
 PRODUCT_PACKAGES += \
@@ -311,6 +311,10 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# QCOM
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/privapp-permissions.xml:system/etc/permissions/privapp-permissions.xml
 
 # QMI
 PRODUCT_PACKAGES += \
