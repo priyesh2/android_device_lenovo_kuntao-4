@@ -38,7 +38,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     vidc.enc.dcvs.extra-buff-count=2 \
-    camera.lowpower.record.enable=1
+    camera.lowpower.record.enable=1 \
+    persist.camera.HAL3.enabled=1
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -88,6 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fp.navigation=1 \
     log.tag.synaFpHal=W \
     log.tag.SynapticsLIB=W \
     log.tag.synaTransport=W
@@ -143,9 +145,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    vendor.enable_prefetch=1 \
     vendor.iop.enable_uxe=1 \
-    vendor.iop.enable_prefetch_ofr=1 \
     vendor.perf.iop_v3.enable=1
 
 # Radio
