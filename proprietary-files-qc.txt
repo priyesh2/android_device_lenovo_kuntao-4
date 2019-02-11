@@ -137,6 +137,9 @@ vendor/lib64/libwvhidl.so
 # Gatekeeper - from Mi A1 tissot_sprout 9 PKQ1.180917.001.V10.0.2.0.PDHMIFK release-keys
 vendor/lib64/hw/gatekeeper.msm8953.so
 
+# FM Radio - from Mi A1 tissot_sprout 9 PKQ1.180917.001.V10.0.2.0.PDHMIFK release-keys
+vendor/bin/fm_qsoc_patches
+
 # GPS - from Mi A1 tissot_sprout 9 PKQ1.180917.001.V10.0.2.0.PDHMIFK release-keys
 vendor/bin/hw/vendor.qti.gnss@1.0-service
 vendor/bin/loc_launcher

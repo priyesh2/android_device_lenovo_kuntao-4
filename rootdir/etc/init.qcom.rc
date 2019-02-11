@@ -995,7 +995,7 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
     #Create FM dir for patchdownloader
-    mkdir /data/misc/fm 0770 system system
+    mkdir /data/vendor/fm 0770 system system
 
     #Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 2770 root system
@@ -1186,12 +1186,12 @@ service wcnss-service /vendor/bin/wcnss_service
     group system wifi radio
     oneshot
 
-# FM
-on property:vendor.hw.fm.init=0
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
-
-on property:vendor.hw.fm.init=1
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
+service fm_dl /vendor/bin/init.qti.fm.sh
+    class late_start
+    user system
+    group system
+    disabled
+    oneshot
 
 #lenovo-sw weiweij added for smart_charger fast charger switch dameon
 service smart_charger /vendor/bin/smart_charger

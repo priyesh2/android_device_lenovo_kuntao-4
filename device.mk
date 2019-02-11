@@ -174,9 +174,9 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    android.hardware.broadcastradio@1.0-impl \
-    FMRadio \
-    libfmjni
+    FM2 \
+    libqcomfm_jni \
+    qcom.fmradio
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
@@ -328,6 +328,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mmi.usb.sh \
     move_widevine_data.sh \
+    init.qti.fm.sh \
     init.advandec.parts.rc \
     fstab.qcom \
     init.qcom.rc \

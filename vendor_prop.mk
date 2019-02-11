@@ -92,6 +92,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     log.tag.SynapticsLIB=W \
     log.tag.synaTransport=W
 
+# Fm
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fm.transmitter=false \
+    vendor.hw.fm.init=0
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
