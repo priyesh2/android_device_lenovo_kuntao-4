@@ -948,8 +948,7 @@ on post-fs-data
     # We chown/chmod /mnt/vendor/persist again so because mount is run as root + defaults
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
-    chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
-    chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv_overseas.bin
+    chown system system /mnt/vendor/persist/WCNSS_wlan_dictionary.dat
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
@@ -1305,7 +1304,6 @@ service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.
     class core
     user root
     group root
-    disabled
 
 # Coresight early boot service
 service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
@@ -1335,7 +1333,7 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1401600:80"
     write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 39000
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "652800"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 652800
 
 on property:sys.dbg.coresight.enable=1
     write /persist/coresight/enable 1
