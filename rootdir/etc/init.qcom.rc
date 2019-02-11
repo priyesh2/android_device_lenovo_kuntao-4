@@ -1304,6 +1304,7 @@ service msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.
     class core
     user root
     group root
+    disabled
 
 # Coresight early boot service
 service cs-early-boot /system/bin/sh /persist/coresight/qdss.agent.sh early-boot /system/etc/init.qcom.debug.sh
