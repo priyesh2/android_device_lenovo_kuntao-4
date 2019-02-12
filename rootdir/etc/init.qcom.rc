@@ -1251,7 +1251,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service power_off_alarm /vendor/bin/power_off_alarm
+service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
     disabled
@@ -1261,6 +1261,10 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
+
+on charger
+    setprop sys.usb.configfs 0
+    start vendor.power_off_alarm
 
 on property:crypto.driver.load=1
      insmod /system/lib/modules/qce.ko
