@@ -335,6 +335,7 @@ PRODUCT_PACKAGES += \
     move_widevine_data.sh \
     init.qti.fm.sh \
     init.qcom.sh \
+    init.qcom.power.rc \
     init.advandec.parts.rc \
     init.qcom.post_boot.sh \
     fstab.qcom \

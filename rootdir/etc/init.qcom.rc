@@ -28,6 +28,7 @@
 import /vendor/etc/init/hw/init.mmi.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.advandec.parts.rc
+import /vendor/etc/init/hw/init.qcom.power.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -1076,7 +1077,6 @@ service vendor.tftp_server /vendor/bin/tftp_server
 
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
-    disabled
 
 service vendor.dataqti /vendor/bin/qti
     class main
@@ -1311,7 +1311,10 @@ on charger
     start qcom-post-boot
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
+    start cs-post-boot
 
-on property:ro.vendor.ril.mbn_copy_completed=1
-    write /data/vendor/radio/copy_complete 1
+on property:sys.dbg.coresight.enable=1
+    write /persist/coresight/enable 1
+
+on property:sys.dbg.coresight.enable=0
+    write /persist/coresight/enable 0
