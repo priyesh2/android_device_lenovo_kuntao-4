@@ -142,7 +142,11 @@ PRODUCT_COPY_FILES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    XiaomiDoze
+    LenovoDoze
+
+# Lenovo Parts
+PRODUCT_PACKAGES += \
+    LenovoParts
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
@@ -277,11 +281,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@1.0-service-sdm
 
-#QTI performance
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -338,6 +337,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh
 
 PRODUCT_PACKAGES += \
+    init.lenovo.parts.rc \
     fstab.qcom \
     init.mmi.usb.rc \
     init.qcom.rc \
