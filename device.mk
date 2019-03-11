@@ -331,6 +331,12 @@ PRODUCT_PACKAGES += \
     libjson \
     libtinyxml
 
+# Spectrum
+PRODUCT_PACKAGES += \
+    Spectrum \
+    init.spectrum.rc \
+    init.spectrum.sh
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.mmi.usb.sh \
