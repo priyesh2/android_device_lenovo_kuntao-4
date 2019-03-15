@@ -231,7 +231,6 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     libnfc \
-    libnfc_jni \
     libnfcdummy \
     com.android.nfc_extras \
     NfcNci \
