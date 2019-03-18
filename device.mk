@@ -322,6 +322,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# Spectrum
+PRODUCT_PACKAGES += \
+    Spectrum \
+    init.spectrum.rc \
+    init.spectrum.sh
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
