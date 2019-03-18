@@ -154,6 +154,14 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.1-service.clearkey
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    LenovoDoze
+
+# Lenovo Parts
+PRODUCT_PACKAGES += \
+    LenovoParts
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -320,6 +328,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mmi.usb.sh \
     init.qti.fm.sh \
+    init.lenovo.parts.rc \
     init.qcom.power.rc \
     fstab.qcom \
     init.qcom.rc \
