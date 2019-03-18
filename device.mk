@@ -342,6 +342,10 @@ PRODUCT_PACKAGES += \
     init.msm.usb.configfs.rc \
     ueventd.qcom.rc
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
