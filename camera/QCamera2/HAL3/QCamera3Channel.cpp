@@ -4050,7 +4050,7 @@ int32_t QCamera3ReprocessChannel::unmapOfflineBuffers(bool all)
                               rc);
                    }
                    LOGD("Unmapped buffer with index %d", (*it).index);
-               }
+           }
                if (!all) {
                    mOfflineBuffers.erase(it);
                    break;
