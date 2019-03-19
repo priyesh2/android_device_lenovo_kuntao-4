@@ -52,10 +52,6 @@ on enable-low-power
     chown system system /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_1/max_brightness
     chmod 0660 /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_1/max_brightness
 
-    # Fast wake-up
-    chown system system sys/devices/soc/qpnp-fg-18/power_supply/bms/hi_power
-    chmod 0664 /sys/devices/soc/qpnp-fg-18/power_supply/bms/hi_power
-
     # Sweep2 sleep
     chmod 0660 /sys/sweep2sleep/sweep2sleep
     chown system system /sys/sweep2sleep/sweep2sleep
