@@ -46,6 +46,12 @@ on enable-low-power
     chown system system /sys/devices/virtual/timed_output/vibrator/vmax_mv
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vmax_mv
 
+    # Flashlight
+    chown system system /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_0/max_brightness
+    chmod 0660 /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_0/max_brightness
+    chown system system /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_1/max_brightness
+    chmod 0660 /sys/devices/soc/qpnp-flash-led-22/leds/led:torch_1/max_brightness
+
     # Sweep2 sleep
     chmod 0660 /sys/sweep2sleep/sweep2sleep
     chown system system /sys/sweep2sleep/sweep2sleep

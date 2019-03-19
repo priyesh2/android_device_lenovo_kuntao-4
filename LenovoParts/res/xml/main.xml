@@ -62,19 +62,12 @@
         android:title="@string/s2s_title">
         <ListPreference
             android:title="@string/s2s_title"
-<<<<<<< HEAD
-=======
             android:summary="@string/s2s_summary"
->>>>>>> d1d2f21... kuntao: parts: Fix typo
             android:key="sweep2sleep"
             android:defaultValue="0"
             android:entries="@array/s2sArray"
             android:entryValues="@array/s2sValues" 
             android:icon="@drawable/ic_sts" />
-         <com.lenovo.parts.S2SVibratorStrengthPreference
-            android:key="s2s_vib_strength"
-            android:title="@string/s2s_vib_strength_title_head" 
-            android:icon="@drawable/ic_vibrate" />
     </PreferenceCategory>
 
 </PreferenceScreen>
