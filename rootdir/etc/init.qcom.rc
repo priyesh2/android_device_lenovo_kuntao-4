@@ -1276,6 +1276,7 @@ on property:ro.vendor.radio.noril=*
 service charger /charger
     class charger
     group system graphics
+    seclabel u:r:healthd:s0
 
 service qlogd /system/xbin/qlogd
     socket qlogd stream 0662 system system
