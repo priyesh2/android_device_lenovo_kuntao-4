@@ -864,6 +864,9 @@ on post-fs
     chmod 0664 /sys/class/power_supply/ext-charger/usb_otg
 #lenovo.common.rc import end
 
+    # default country code
+    setprop ro.boot.wificountrycode 00
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
