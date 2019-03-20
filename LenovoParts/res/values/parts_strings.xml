@@ -25,7 +25,11 @@
 
     <!-- s2s -->
     <string name="s2s_title">Sweep to sleep</string>
+<<<<<<< HEAD
     <string name="s2s_vib_strength_title_head">Sweep2sleep vibration</string>
+=======
+    <string name="s2s_summary">Choose sweep positions</string>
+>>>>>>> 6cf6fa1... kuntao: parts: Fix string name
 
     <!-- Kcal -->
     <string name="kcal_title">Display color</string>

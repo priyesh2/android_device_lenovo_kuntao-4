@@ -27,7 +27,12 @@
 
     <!-- s2s -->
     <string name="s2s_title">Kaydırarak uyutma</string>
+<<<<<<< HEAD
     <string name="s2s_vib_strength_title_head">Kaydırarak uyutma titreşim yoğunluğu</string>
+=======
+    <string name="category_s2s">Kaydırma</string>
+    <string name="s2s_summary">Kaydırma konumlarını seçin</string>
+>>>>>>> 6cf6fa1... kuntao: parts: Fix string name
 
     <!-- Kcal -->
     <string name="kcal_title">Ekran rengi</string>
