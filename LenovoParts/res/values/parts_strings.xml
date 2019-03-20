@@ -23,7 +23,7 @@
     <!-- s2s -->
     <string name="category_s2s">Sweep</string>
     <string name="s2s_title">Sweep to sleep</string>
-    <string mane="s2s_summary">Choose sweep positions</string>
+    <string name="s2s_summary">Choose sweep positions</string>
 
     <!-- Kcal -->
     <string name="kcal_title">Display color</string>
