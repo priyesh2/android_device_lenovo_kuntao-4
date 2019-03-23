@@ -96,7 +96,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fp Gestures
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.fp.navigation=1
+    persist.vendor.fp.gesture=1
 
 # Fm
 PRODUCT_PROPERTY_OVERRIDES += \
