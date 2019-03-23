@@ -1,3 +1,3 @@
-add_lunch_combo lineage_kuntao-eng
-add_lunch_combo lineage_kuntao-user
-add_lunch_combo lineage_kuntao-userdebug
+add_lunch_combo bootleg_kuntao-eng
+add_lunch_combo bootleg_kuntao-user
+add_lunch_combo bootleg_kuntao-userdebug

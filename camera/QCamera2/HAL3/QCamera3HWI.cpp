@@ -248,7 +248,6 @@ const int32_t available_thumbnail_sizes[] = {176, 144,
                                              240, 160,
                                              256, 154,
                                              240, 240,
-                                             320, 240};
                                              320, 240,
                                                0, 0  };
 
@@ -6475,7 +6474,7 @@ int QCamera3HardwareInterface::initStaticMetadata(uint32_t cameraId)
     uint32_t zoomSteps = gCamCapability[cameraId]->zoom_ratio_tbl_cnt;
     uint32_t maxZoomStep = gCamCapability[cameraId]->zoom_ratio_tbl[zoomSteps - 1];
     uint32_t minZoomStep = 100; //as per HAL1/API1 spec
-    float maxZoom = maxZoomStep/minZoomStep
+    float maxZoom = maxZoomStep/minZoomStep;
     staticInfo.update(ANDROID_SCALER_AVAILABLE_MAX_DIGITAL_ZOOM,
             &maxZoom, 1);
 

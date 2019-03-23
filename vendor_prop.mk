@@ -95,6 +95,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false \
     vendor.hw.fm.init=0
 
+# FP Gestures
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fp.navigation=1
+
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
