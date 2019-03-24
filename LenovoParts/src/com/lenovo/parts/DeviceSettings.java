@@ -63,7 +63,10 @@ public class DeviceSettings extends PreferenceFragment implements
     private TwoStatePreference mTapToWakeSwitch;
     private VibratorStrengthPreference mVibratorStrength;
 
+<<<<<<< HEAD
     private S2SVibratorStrengthPreference mVibratorStrengthS2S;
+=======
+>>>>>>> d1d2f21... kuntao: parts: Fix typo
     private ListPreference mS2S;
     private Preference mKcalPref;
     private ListPreference mSPECTRUM;

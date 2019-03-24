@@ -62,6 +62,10 @@
         android:title="@string/s2s_title">
         <ListPreference
             android:title="@string/s2s_title"
+<<<<<<< HEAD
+=======
+            android:summary="@string/s2s_summary"
+>>>>>>> d1d2f21... kuntao: parts: Fix typo
             android:key="sweep2sleep"
             android:defaultValue="0"
             android:entries="@array/s2sArray"
