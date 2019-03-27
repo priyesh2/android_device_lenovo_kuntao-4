@@ -1,5 +1,5 @@
 #
-# system.prop for kuntao
+# vendor.prop for kuntao
 #
 
 # Audio
@@ -8,12 +8,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
     audio.offload.min.duration.secs=30 \
     audio.offload.video=true \
-    audio.dolby.ds2.hardbypass=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
     ro.vendor.audio.sdk.fluencetype=none \
-    vendor.audio.dolby.ds2.enabled=true \
     vendor.audio_hal.period_size=192 \
     vendor.audio.hw.aac.encoder=true \
     vendor.audio.offload.buffer.size.kb=64 \
@@ -26,24 +24,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.playback.mch.downsample=true \
     vendor.audio.safx.pbe.enabled=true \
     vendor.voice.path.for.pcm.voip=true \
-    ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7
+    ro.af.client_heap_size_kbyte=7168 \
+    persist.vendor.audio.hw.binder.size_kbyte=1024
 
 # Bluetooh
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=smd \
-    ro.qualcomm.bt.hci_transport=smd
+    vendor.qcom.bluetooth.soc=smd
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.camera.hal1.packagelist=com.whatsapp,com.android.facelock \
     persist.vendor.camera.display.umax=1920x1080 \
     persist.vendor.camera.display.lmax=1280x720 \
     vidc.enc.dcvs.extra-buff-count=2 \
-    camera.lowpower.record.enable=1
+    camera.lowpower.record.enable=1 \
+    persist.camera.HAL3.enabled=1
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.cne.feature=1
+    persist.vendor.cne.feature=1
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -56,11 +55,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.gralloc.enable_fb_ubwc=1 \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=0 \
     ro.sf.lcd_density=480 \
+	   vendor.display.disable_skip_validate=1 \
     vendor.display.disable_rotator_downscale=1
+
+# Miracast
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_hwc_vds=1 \
+    persist.hwc.enable_vds=1 \
+    persist.sys.wfd.nohdcp=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0 \
+    vendor.gralloc.disable_wb_ubwc=1 \
+    vendor.gralloc.enable_fb_ubwc=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -72,16 +81,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fp Gestures
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.fp.navigation=1
+    persist.vendor.fp.gesture=1
+
+# Fm
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fm.transmitter=false \
+    vendor.hw.fm.init=0
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1
-    persist.radio.VT_CAM_INTERFACE=2 \
-    persist.radio.VT_ENABLE=1 \
-    persist.radio.VT_HYBRID_ENABLE=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=2
+    persist.dbg.vt_avail_ovr=1 \
+    persist.vendor.qti.telephony.vt_cam_interface=1
 
 # Gps
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -89,6 +100,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.mm.en.sec.smoothstreaming=true \
     media.stagefright.audio.sink=280 \
     vendor.vidc.dec.downscalar_width=1920 \
     vendor.vidc.dec.downscalar_height=1088 \
@@ -97,21 +109,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable_pframes=1 \
     vendor.vidc.enc.narrow.searchrange=1
 
-# NITZ
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.rild.nitz_plmn="" \
-    persist.rild.nitz_long_ons_0="" \
-    persist.rild.nitz_long_ons_1="" \
-    persist.rild.nitz_long_ons_2="" \
-    persist.rild.nitz_long_ons_3="" \
-    persist.rild.nitz_short_ons_0="" \
-    persist.rild.nitz_short_ons_1="" \
-    persist.rild.nitz_short_ons_2="" \
-    persist.rild.nitz_short_ons_3=""
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    vendor.iop.enable_uxe=1 \
+    vendor.perf.iop_v3.enable=1 \
+    ro.vendor.at_library=libqti-at.so \
+    persist.vendor.qti.games.gt.prof=1 \
+    vendor.perf.gestureflingboost.enable=1 \
+    ro.vendor.scroll.preobtain.enable=1 \
+    vendor.perf.dolphin.enable=1 \
+    vendor.iop.enable_prefetch_ofr=1
 
 # Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -120,15 +128,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    persist.radio.apm_sim_not_pwdn=1 \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.radio.multisim.config=dsds \
     ro.telephony.default_network=9,1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
+    persist.vendor.radio.add_power_save=1 \
+    persist.vendor.radio.aosp_usr_pref_sel=true
+
+# Netmgrd
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.use_data_netmgrd=true \
     persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent
+    persist.vendor.data.mode=concurrent
 
 # Fling velocities
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -141,7 +155,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.delta_time.enable=true
+    persist.vendor.delta_time.enable=true
 
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \

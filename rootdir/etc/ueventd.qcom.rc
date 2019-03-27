@@ -25,6 +25,11 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+# Firmware directory Path
+# Below macro will be read by uevent and path will
+# be added to search path for firmware loading
+firmware_directories /vendor/firmware_mnt/image/
+
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     oem_2901
 
@@ -100,9 +105,9 @@
 /dev/hsicctl14            0640   radio      radio
 /dev/hsicctl15            0640   radio      radio
 /dev/hsicctl16            0640   radio      radio
-/dev/mhi_pipe_14          0640   radio      radio
-/dev/mhi_pipe_16          0640   radio      radio
-/dev/mhi_pipe_32          0640   radio      radio
+/dev/mhi_*_pipe_14          0640   radio      radio
+/dev/mhi_*_pipe_16          0640   radio      radio
+/dev/mhi_*_pipe_32          0640   radio      radio
 /dev/at_usb0              0640   radio      radio
 /dev/at_mdm0              0640   radio      radio
 /dev/video*               0660   system     camera
@@ -125,6 +130,7 @@
 /dev/adsprpc-smd          0664   system     system
 /dev/system_health_monitor 0644  radio      system
 /dev/mdss_rotator         0664   system     system
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
@@ -192,50 +198,9 @@
 /dev/tsc_mux0             0660   media       media
 /dev/tsc_ci0              0660   media       media
 
-# sensors
-/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
-/sys/devices/f9925000.i2c/i2c-0/0-*                 enable         0660    input    system
-/sys/devices/f9925000.i2c/i2c-0/0-*                 poll_delay     0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            enable         0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            poll_delay     0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            enable_wakeup  0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            max_latency    0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            flush          0660    input    system
-/sys/devices/soc.0/78b6000.i2c/i2c-0/0-*            calibrate      0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            enable         0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            poll_delay     0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            enable_wakeup  0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            max_latency    0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            flush          0660    input    system
-/sys/devices/soc.0/78b5000.i2c/i2c-1/1-*            calibrate      0660    input    system
-/sys/devices/virtual/optical_sensors/proximity      ps_adc         0660    input    system
-/sys/devices/virtual/optical_sensors/proximity      ps_poll_delay  0660    input    system
-/sys/devices/virtual/optical_sensors/lightsensor    ls_auto        0660    input    system
-/sys/devices/virtual/optical_sensors/lightsensor    ls_poll_delay  0660    input    system
-/sys/devices/virtual/input/input*                   poll           0660    input    system
-/sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0020/input/input*    secure_touch_enable  0660   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0038/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-0038/input/input*    secure_touch_enable  0660   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-004b/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/78b7000.i2c/i2c-3/3-004b/input/input*    secure_touch_enable  0660   system  drmrpc
-/sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input*    secure_touch         0440   system  drmrpc
-/sys/devices/soc/c179000.i2c/i2c-5/5-0020/input/input*    secure_touch_enable  0660   system  drmrpc
-
-# laser sensor access
-/sys/devices/virtual/input/input*                   enable_ps_sensor 0660  system   system
-/sys/devices/virtual/input/input*                   set_delay_ms     0660  system   system
-
 # vm_bms
 /dev/vm_bms               0660   system     system
 /dev/battery_data         0660   system     system
-
-# wlan
-/dev/wcnss_wlan           0660   system     system
-/dev/wcnss_ctrl           0660   system     system
-/sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0/queues/rx-* rps_cpus 0660 system system
-/sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/p2p0/queues/rx-* rps_cpus 0660 system system
 
 #nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
@@ -250,6 +215,62 @@
 
 # SSR devices
 /dev/subsys_*         0640   system     system
+
+# Sensors
+/dev/iio:device* 0660 system system
+
+/sys/devices/iio:device* buffer/enable                     0660 system system
+/sys/devices/iio:device* buffer/length                     0660 system system
+/sys/devices/iio:device* sampling_frequency                0660 system system
+/sys/devices/iio:device* scan_elements/in_timestamp_en     0660 system system
+/sys/devices/iio:device* hwfifo_flush                      0660 system system
+/sys/devices/iio:device* hwfifo_enabled                    0660 system system
+/sys/devices/iio:device* hwfifo_watermark                  0660 system system
+/sys/devices/iio:device* injection_mode                    0660 system system
+
+# Accelerometer
+/sys/devices/iio:device* scan_elements/in_accel_x_en       0660 system system
+/sys/devices/iio:device* scan_elements/in_accel_y_en       0660 system system
+/sys/devices/iio:device* scan_elements/in_accel_z_en       0660 system system
+/sys/devices/iio:device* in_accel_x_scale                  0660 system system
+/sys/devices/iio:device* in_accel_y_scale                  0660 system system
+/sys/devices/iio:device* in_accel_z_scale                  0660 system system
+/sys/devices/iio:device* in_accel_injection_raw            0660 system system
+
+# Magnetometer
+/sys/devices/iio:device* scan_elements/in_magn_x_en        0660 system system
+/sys/devices/iio:device* scan_elements/in_magn_y_en        0660 system system
+/sys/devices/iio:device* scan_elements/in_magn_z_en        0660 system system
+/sys/devices/iio:device* in_magn_x_scale                   0660 system system
+/sys/devices/iio:device* in_magn_y_scale                   0660 system system
+/sys/devices/iio:device* in_magn_z_scale                   0660 system system
+
+# Gyroscope
+/sys/devices/iio:device* scan_elements/in_anglvel_x_en     0660 system system
+/sys/devices/iio:device* scan_elements/in_anglvel_y_en     0660 system system
+/sys/devices/iio:device* scan_elements/in_anglvel_z_en     0660 system system
+/sys/devices/iio:device* in_anglvel_x_scale                0660 system system
+/sys/devices/iio:device* in_anglvel_y_scale                0660 system system
+/sys/devices/iio:device* in_anglvel_z_scale                0660 system system
+
+# Pressure
+/sys/devices/iio:device* scan_elements/in_pressure_en      0660 system system
+/sys/devices/iio:device* scan_elements/in_temp_en          0660 system system
+/sys/devices/iio:device* in_pressure_scale                 0660 system system
+
+# Step counter
+/sys/devices/iio:device* max_delivery_rate                 0660 system system
+/sys/devices/iio:device* reset_counter                     0660 system system
+/sys/devices/iio:device* scan_elements/in_step_counter_en  0660 system system
+
+# Significant motion
+/sys/devices/iio:device* scan_elements/in_sign_motion_en   0660 system system
+
+# Step detector
+/sys/devices/iio:device* scan_elements/in_step_detector_en 0660 system system
+
+# Tilt sensor
+/sys/devices/iio:device* scan_elements/in_tilt_en          0660 system system
 
 # Ultrasound device
 /dev/usf1                 0660   system     system
@@ -266,8 +287,6 @@
 
 # Add device block for FRP
 /dev/block/platform/soc/7824900.sdhci/by-name/config    0600   system     system
-/dev/block/platform/soc/7464900.sdhci/by-name/frp       0600   system     system
-/dev/block/platform/soc/624000.ufshc/by-name/frp        0600   system     system
 
 # lenovo-sw.lily8 add for SmartPA mode begin
 /dev/i2c_smartpa          0660   media      media
