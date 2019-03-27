@@ -268,6 +268,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mmi.usb.sh \
     init.qti.fm.sh \
+    init.qcom.sh \
     init.lenovo.parts.rc \
     init.qcom.power.rc \
     fstab.qcom \
