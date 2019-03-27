@@ -57,8 +57,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     ro.vendor.display.cabl=0 \
-    ro.sf.lcd_density=480 \
-	   vendor.display.disable_skip_validate=1 \
+    ro.sf.lcd_density=450 \
+    vendor.display.disable_skip_validate=1 \
     vendor.display.disable_rotator_downscale=1
 
 # Miracast
