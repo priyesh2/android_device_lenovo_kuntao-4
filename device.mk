@@ -130,6 +130,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_cmd_smd_1080p_549.xml
 
+# Doze mode
+PRODUCT_PACKAGES += \
+    LenovoDoze
+
+# Lenovo Parts
+PRODUCT_PACKAGES += \
+    LenovoParts
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -251,6 +259,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.mmi.usb.sh \
     init.qti.fm.sh \
+    init.lenovo.parts.rc \
     init.qcom.power.rc \
     fstab.qcom \
     init.qcom.rc \
