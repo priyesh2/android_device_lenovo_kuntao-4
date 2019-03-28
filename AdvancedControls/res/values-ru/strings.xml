@@ -36,7 +36,8 @@
     <string name="plus_one">+1</string>
     <string name="minus_one">-1</string>
     <string name="restore_default">По умолчанию</string>
-    <string name="restore_on_boot">Восстановление настроек через приложение закрыть/загрузить</string>
+    <string name="restore_on_boot">Применить при загрузке</string>
+    <string name="restore_on_boot_summary">Восстановить настройки при загрузке</string>
     <string name="category_kcal_presets">Пресеты ккал</string>
     <string name="kcal_presets_title">Используйте предустановленные значения ккал</string>
     <string name="presets_list_title">Выберите пресет ккал</string>

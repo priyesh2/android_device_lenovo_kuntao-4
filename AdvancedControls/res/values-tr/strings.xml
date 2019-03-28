@@ -37,6 +37,7 @@
     <string name="minus_one">-1</string>
     <string name="restore_default">Varsayılan</string>
     <string name="restore_on_boot">Açılışta ayarları uygula</string>
+    <string name="restore_on_boot_summary">Ön yükleme sırasında ayarları geri yükle</string>
     <string name="category_kcal_presets">Kcal</string>
     <string name="kcal_presets_title">Kcal ön ayar değerini kullan</string>
     <string name="presets_list_title">Kcal ön ayar seçin</string>
