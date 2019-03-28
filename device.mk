@@ -298,6 +298,7 @@ PRODUCT_COPY_FILES += \
 # WiFi HAL
 PRODUCT_PACKAGES += \
     libcld80211 \
+    wcnss_service \
     libwpa_client \
     hostapd \
     wpa_supplicant \
