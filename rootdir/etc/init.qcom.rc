@@ -395,11 +395,8 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
-on property:persist.vendor.radio.atfwd.start=false
-    stop vendor.atfwd
-
-on property:vendor.radio.atfwd.start=false
-    stop vendor.atfwd
+on property:persist.vendor.radio.atfwd.start=true
+    start vendor.atfwd
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
