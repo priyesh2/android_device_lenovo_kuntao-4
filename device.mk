@@ -135,6 +135,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     LenovoDoze
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # Lenovo Parts
 PRODUCT_PACKAGES += \
     LenovoParts
