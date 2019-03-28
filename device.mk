@@ -106,14 +106,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     Snap \
-    camera.msm8953 \
-    libmm-qcamera
-
-PRODUCT_COPY_FILES +=  \
-    $(LOCAL_PATH)/configs/camera/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
-
-PRODUCT_BOOT_JARS += \
-    com.qualcomm.qti.camera
+    camera.msm8953
 
 # Display
 PRODUCT_PACKAGES += \
