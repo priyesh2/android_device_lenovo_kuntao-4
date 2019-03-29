@@ -68,7 +68,7 @@ LOCAL_SRC_FILES    := etc/init.lenovo.parts.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
- Spectrum scripts
+# Spectrum scripts
 include $(CLEAR_VARS)
 LOCAL_MODULE		:= init.spectrum.rc
 LOCAL_MODULE_TAGS	:= optional eng

@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \
     android.hardware.gnss@1.0-service-qti
-(
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
