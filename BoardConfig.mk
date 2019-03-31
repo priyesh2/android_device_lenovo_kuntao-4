@@ -173,6 +173,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_PER_MGR_ENABLED := true
 
 # Power
+TARGET_RPM_SYSTEM_STAT := /d/rpm_stats
 TARGET_HAS_NO_WLAN_STATS := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/board_properties/tpd_suspend_status"
 TARGET_USES_INTERACTION_BOOST := true
