@@ -293,14 +293,8 @@ on post-fs-data
     # Create netmgr log dir
     mkdir /data/vendor/netmgr 0770 radio radio
 
-    #create ipacm log dir
-    mkdir /data/vendor/ipa 0770 radio radio
-
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
-
-    #Create QTI dir for logs
-    mkdir /data/vendor/dataqti 0770 radio radio
 
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
@@ -344,11 +338,6 @@ on post-fs-data
     mkdir /dev/socket/location/mq 0770 gps gps
     mkdir /dev/socket/location/xtra 0770 gps gps
 
-    # create QDMA dropbox
-    mkdir /data/vendor/qdmastats 0700 system system
-    mkdir /data/vendor/qdma 0770 system system
-    mkdir /dev/socket/qdma 2770 system system
-
     # Create /data/vendor/time folder for time-services
     mkdir /data/vendor/time/ 0700 system system
 
@@ -373,9 +362,6 @@ on post-fs-data
     write /data/vendor/radio/db_check_done 0
     chown radio radio /data/vendor/radio/db_check_done
     chmod 0660 /data/vendor/radio/db_check_done
-
-    #WAPI
-    mkdir /data/vendor/wapi_certificate 0770 system wifi
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
