@@ -14,12 +14,17 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package com.lenovo.gestures;
 
-public class Constants {
-    public static final String FINGERPRINT_GESTURES_INTENT =
-            "org.lineageos.settings.device.FINGERPRINT_GESTURES";
-    public static final String FINGERPRINT_GESTURES_INTENT_ENABLED = "fingerprint_gestures";
+import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
-    public static final String FINGERPRINT_GESTURES_KEY = "fingerprint_gestures";
+public class ButtonSettingsActivity extends PreferenceActivity {
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getFragmentManager().beginTransaction().replace(android.R.id.content,
+                new ButtonSettingsFragment()).commit();
+    }
 }

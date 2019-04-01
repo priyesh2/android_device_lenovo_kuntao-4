@@ -14,24 +14,17 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package com.lenovo.gestures;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
+import android.os.UserHandle;
 
-public class BootCompletedReceiver extends BroadcastReceiver {
+public class Utils {
 
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        setFingerprintGesturesState(context);
-    }
-
-    private void setFingerprintGesturesState(Context context) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        boolean enabled = prefs.getBoolean(Constants.FINGERPRINT_GESTURES_KEY, false);
-        Utils.broadcastFingerprintGesturesEnabled(context, enabled);
+    public static void broadcastFingerprintGesturesEnabled(Context context, boolean enabled) {
+        final Intent intent = new Intent(Constants.FINGERPRINT_GESTURES_INTENT);
+        intent.putExtra(Constants.FINGERPRINT_GESTURES_INTENT_ENABLED, enabled);
+        context.sendBroadcastAsUser(intent, UserHandle.CURRENT);
     }
 }

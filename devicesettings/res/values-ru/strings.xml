@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources>
+    <string name="button_panel_kek_summary">Жесты отпечатков пальцев</string>
     <string name="fingerprint_gestures_title">Жесты отпечатков пальцев</string>
     <string name="fingerprint_gestures_summary">Нажмите чтобы вернуться назад, нажмите и удерживайте чтобы просмотреть последние</string>
 </resources>

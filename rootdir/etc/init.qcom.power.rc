@@ -62,6 +62,9 @@ on enable-low-power
     write /sys/devices/system/cpu/cpufreq/interactive/use_sched_load 1
     write /sys/devices/system/cpu/cpufreq/interactive/use_migration_notif 1
 
+    # Fp Gestures
+    setprop persist.vendor.fp.gesture 1
+
 on property:sys.boot_completed=1
     trigger enable-low-power
 

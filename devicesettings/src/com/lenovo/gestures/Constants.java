@@ -14,17 +14,12 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package com.lenovo.gestures;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.UserHandle;
+public class Constants {
+    public static final String FINGERPRINT_GESTURES_INTENT =
+            "com.lenovo.gestures.FINGERPRINT_GESTURES";
+    public static final String FINGERPRINT_GESTURES_INTENT_ENABLED = "fingerprint_gestures";
 
-public class Utils {
-
-    public static void broadcastFingerprintGesturesEnabled(Context context, boolean enabled) {
-        final Intent intent = new Intent(Constants.FINGERPRINT_GESTURES_INTENT);
-        intent.putExtra(Constants.FINGERPRINT_GESTURES_INTENT_ENABLED, enabled);
-        context.sendBroadcastAsUser(intent, UserHandle.CURRENT);
-    }
+    public static final String FINGERPRINT_GESTURES_KEY = "fingerprint_gestures";
 }
