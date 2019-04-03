@@ -29,16 +29,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-<<<<<<< HEAD
-    vendor.qcom.bluetooth.soc=smd \
-    ro.qualcomm.bt.hci_transport=smd
-=======
     persist.vendor.bt.enable.splita2dp=false \
     bluetooth.hfp.client=1 \
     vendor.qcom.bluetooth.soc=smd \
     ro.bluetooth.hfp.ver=1.7 \
     ro.vendor.qualcomm.bt.hci_transport=smd
->>>>>>> bdf698e... kuntao: İmprove bt+wifi coexistence
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
