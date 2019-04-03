@@ -15,9 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <string nama="advanced_settings">HW Buttons</strings>
-    <string name="advanced_settings_summary">HW Buttons Gesturea</string>
-
     <string name="fingerprint_gestures_title">Fingerprint gestures</string>
     <string name="fingerprint_gestures_summary">Tap to go back, long press to view recents</string>
 </resources>
