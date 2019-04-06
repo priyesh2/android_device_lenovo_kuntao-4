@@ -147,8 +147,8 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_CONFIG := kuntao_defconfig
 
-# Lineage Hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|device/lenovo/kuntao/lineagehw|**/*.java
+# Pixel Hardware
+JAVA_SOURCE_OVERLAYS := org.pixelexperience.keydisabler|device/lenovo/kuntao/keydisabler|**/*.java
 
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
