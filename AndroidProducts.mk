@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_kuntao.mk
+    $(LOCAL_DIR)/xtended_kuntao.mk
