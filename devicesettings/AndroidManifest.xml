@@ -58,7 +58,8 @@
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_settings_additional_buttons" />
             <meta-data android:name="com.android.settings.summary"
-                android:resource="@string/button_panel_kek_summary"/>
+                android:resource="@string/button_panel_kek_summary"
+                android:icon="@drawable/ic_settings_additional_buttons.xml" />
         </activity>
 
         <activity android:name=".KeyHandler" />
